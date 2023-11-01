@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Обнулятор емкости</title>
+    <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section class="page_wrapper">
+      <div class="reg_row">
+        <button id="refresh_port_btn" type="button" class="btn btn-link">Порт:</button>
+        <div id='select-port-wrapper'></div>
+        <input type="number" value="57600" data-bs-toggle="dropdown" class="baudrate-form form-control form-control-sm" id="port-baudrate" /> 
+        <button id="con_discon_btn" type="button" class="btn btn-sm btn-light">Открыть</button>
+        <ul class="dropdown-menu">
+          <li><a onclick="setBaudrateDropdown(1200)" class="dropdown-item" href="#">1200</a></li>
+          <li><a onclick="setBaudrateDropdown(115200)" class="dropdown-item" href="#">115200</a></li>
+          <li><a onclick="setBaudrateDropdown(57600)" class="dropdown-item" href="#">57600</a></li>
+        </ul>
+        <div id="port_status" class="port-status"></div>
+      </div>
+      
+      <div class="reg_row">
+        <button id="reg_1_write" type="button" class="btn btn-sm btn-light">Запись</button>
+        <div class="stage_label" id="stage_label"></div>
+      </div>
+
+      <div class="reg_row">
+        <div id="battery_data_label"></div>
+      </div>
+      <!-- <img width="520px" src="img/Review.png" /> -->
+
+      <!-- <div class="reg_row">
+        <input id="title"/>
+        <button id="btn" type="button">💖</button>
+      </div> -->
+  
+
+
+  </body>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="./js/crc.js"></script>
+  <script src="./js/render.js"></script>
+  <script src="./js/assistance.js"></script>
+</html>

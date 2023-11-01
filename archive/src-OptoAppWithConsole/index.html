@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section class="page_wrapper">
+      <div class="reg_row">
+        <button id="refresh_port_btn" type="button" class="btn btn-link">Порт:</button>
+        <div id='select-port-wrapper'></div>
+        <input type="number" value="57600" data-bs-toggle="dropdown" class="baudrate-form form-control form-control-sm" id="port-baudrate" /> 
+        <button id="con_discon_btn" type="button" class="btn btn-sm btn-light">Открыть</button>
+        <ul class="dropdown-menu">
+          <li><a onclick="setBaudrateDropdown(1200)" class="dropdown-item" href="#">1200</a></li>
+          <li><a onclick="setBaudrateDropdown(115200)" class="dropdown-item" href="#">115200</a></li>
+          <li><a onclick="setBaudrateDropdown(57600)" class="dropdown-item" href="#">57600</a></li>
+        </ul>
+        <div id="port_status" class="port-status"></div>
+      </div>
+      
+      <div class="reg_row">
+        <button id="reg_1_write" type="button" class="btn btn-sm btn-light">Запись</button>
+        <button id="reg_1_stop" type="button" class="read_btn btn btn-sm btn-light">Стоп</button>
+        <button onclick="console.clear()" type="button" class="read_btn btn btn-sm btn-light">Очистить консоль</button>
+      </div>
+      <img width="520px" src="img/Review.png" />
+
+      <!-- <div class="reg_row">
+        <input id="title"/>
+        <button id="btn" type="button">💖</button>
+      </div> -->
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Конфигурация альтернативного радиоканала</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body modal-body-wrapper">
+            <div class="mb-header">
+              <div class="modk-title">
+                Параметры
+              </div>
+              <div class="modk-value">
+                Новые значения
+              </div>
+              <div class="modk-value">
+                Исходные значения
+              </div>
+            </div>
+
+            <div class="mb-payload">
+              <div class="modk-title">
+                <div class="mb-a">Частота, кГц</div>
+                <div class="mb-a"> Фактор распространения (sf)</div>
+                <div class="mb-a">Полоса частот (bw), кГц</div>
+                <div class="mb-a">Мощность передатчика, дБм</div>
+                <div class="mb-a">Длительность окна приема</div>
+                <div class="mb-a">Время прослушивания, мин</div>
+              </div>
+              <div class="modk-value">
+                <div class="mb-a">864500</div>
+                <div class="mb-a">7</div>
+                <div class="mb-a">500</div>
+                <div class="mb-a">16</div>
+                <div class="mb-a">15</div>
+                <div class="mb-a">10</div>
+              </div>
+              <div class="modk-value">
+                <div class="mb-a">864500</div>
+                <div class="mb-a">7</div>
+                <div class="mb-a">500</div>
+                <div class="mb-a">16</div>
+                <div class="mb-a">15</div>
+                <div class="mb-a">10</div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            <button type="button" class="btn btn-primary">Записать исходные значения</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="./js/crc.js"></script>
+  <script src="./js/render.js"></script>
+  <script src="./js/assistance.js"></script>
+</html>

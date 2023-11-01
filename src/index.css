@@ -1,0 +1,155 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  /* max-width: 38rem;
+  padding: 2rem; */
+}
+
+.page_wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10vw;
+  padding-right: 2vw;
+  width: 100vw;
+  height: 100vh;
+}
+
+.port-select {
+  width: 16vw;
+  /* margin-left: 20px; */
+  margin-right: 5px;
+}
+
+.baudrate-form {
+  width: 13vw;
+  margin-right: 5px;
+}
+#reg_1_input {
+  width: 20vw !important;
+}
+
+.reg_row {
+  display: flex;
+  align-items: center;
+  /* flex:1; */
+  /* justify-content: center; */
+  margin-top: 5px;
+}
+
+.port-status {
+  margin-left: 5px;
+  font-weight: 500;
+}
+.port-status-error {
+  color: red
+}
+.port-status-success {
+  color: ForestGreen; 
+}
+
+
+.reg_row_numb {
+  font-size: 100;
+  padding-right: 5px;
+}
+
+.read_btn {
+  margin-left: 5px;
+}
+
+
+.scan_left {
+  display:flex;
+  align-items: center;
+}
+
+.scan {
+  justify-content: space-between;
+}
+.scan_title {
+  margin-right: 5px;
+}
+.scan_time {
+  margin-left: 5px;
+}
+
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-direction: 15;
+  width: 100%;
+  height: 100%;
+
+  scroll-behavior: auto;
+  overflow-y: scroll;
+}
+.table-header {
+  padding-bottom: 5px;
+  border-bottom: 1px solid silver;
+  padding-top: 10px;
+}
+
+.table-payload {
+  width: 100%;
+  height: 30vh;
+  background-color: gainsboro;
+  margin-bottom: 5px;
+}
+.table-data {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-bottom: 1px solid silver;
+  align-items: flex-start;
+}
+
+.main-table-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.table-body-wrapper {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 12;
+  scroll-behavior: auto;
+  overflow-y: scroll;
+}
+
+.footer {
+  height: 0.1vh;
+}
+
+.th_numb {
+  flex: 3;
+  flex-shrink: unset;
+}
+.th_serialNumb {
+  flex: 12;
+  flex-shrink: unset;
+}
+.th_fixTime {
+  flex: 12;
+  flex-shrink: unset;
+}
+.th_payload {
+  flex: 12;
+  flex-shrink: unset;
+}
+.scroll-mimic {
+  width: 17px;
+  height: 10px;
+}
+
+.stage_label {
+  margin-left: 20px;
+}
